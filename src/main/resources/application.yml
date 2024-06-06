@@ -1,0 +1,23 @@
+
+base:
+  url: http://localhost:8080/
+
+spring:
+  application:
+    name: URLShortening
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 12345
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+  jpa:
+    hibernate:
+      ddl-auto: none
+  cache:
+    type: redis
+  data:
+    redis:
+      host: redis
+      port: 6379
